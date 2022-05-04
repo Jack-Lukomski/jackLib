@@ -1,5 +1,3 @@
 # jackLib
 
-This is a libary of c functions that are commnly used.
-
-- main.c is used as a tester
+This is a libary of c functions that are commnly used. Main is ment to be a tester.
