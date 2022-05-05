@@ -15,7 +15,9 @@ int length(int *list)
 {
     int i = 0;
     while (*(list + i) != 0)
+    {
         i++;
+    }
     return i;
 }
 
@@ -24,9 +26,13 @@ void printList(int *list)
     printf("[");
     for (int i = 0; i < length(list); i++)
         if (i == length(list) - 1)
+        {
             printf("%d", *(list + i));
+        }
         else
+        {
             printf("%d, ", *(list + i));
+        }
     printf("]\n");
 }
 
@@ -53,7 +59,9 @@ int max(int *list)
     for (int i = 0; i < length(list); i++)
     {
         if (*(list +i) > max)
+        {
             max = *(list + i);
+        }
     }
     return max;
 }
@@ -64,7 +72,9 @@ int min(int *list)
     for (int i = 0; i < length(list); i++)
     {
         if (*(list +i) < min)
+        {
             min = *(list + i);
+        }
     }
     return min;
 }
@@ -72,7 +82,9 @@ int min(int *list)
 float medium(int *list)
 {
     if (length(list) % 2 == 1)
+    {
         return *(list + length(list)/2 + 1);
+    }
     else 
         return *(list + length(list)/2 + 1) / *(list + length(list)/2 - 1);
 }
@@ -87,11 +99,17 @@ int binarySearch(int *list, int find)
     {
         half = (start + end) / 2;
         if (*(list + half) < find)
+        {
             start = half;
+        }
         if (*(list + half) > find)
-            end = half;
+        {
+                end = half;
+        }
         if (*(list + half) == find)
+        {
             return half;
+        }
     }
     return 0;
 }
@@ -101,7 +119,9 @@ int search(int *list, int find)
     for (int i = 0; i < length(list); i++)
     {
         if (*(list + i) == find)
+        {
             return i;
+        }
     }
     return 0;
 }
