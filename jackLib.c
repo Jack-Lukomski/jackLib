@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #define SIZE 20
 
+// By jack
+
 int length(int *list);
 void printList(int *list);
 void bubbleSort(int *list);
